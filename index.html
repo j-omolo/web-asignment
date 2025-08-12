@@ -3,365 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced HTML5 Content and Form Validation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header, section, footer {
-            margin-bottom: 30px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        img, audio, video {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 15px 0;
-        }
-        fieldset {
-            margin: 20px 0;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        legend {
-            font-weight: bold;
-            padding: 0 10px;
-        }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        input[type="radio"], input[type="checkbox"] {
-            width: auto;
-            margin-right: 10px;
-        }
-        .radio-group, .checkbox-group {
-            margin: 10px 0;
-        }
-        .radio-group label, .checkbox-group label {
-            display: inline-flex;
-            align-items: center;
-            margin: 5px 15px 5px 0;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        .required::after {
-            content: " *";
-            color: red;
-        }
-    </style>
+    <title>CSS Box Model Demonstration</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Web Development Resources</h1>
-        <p>A comprehensive guide to HTML5 advanced features and best practices.</p>
+        <h1>CSS Box Model Demonstration</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="lists-section">
-        <h2>Essential Web Development Skills</h2>
-        
-        <!-- Ordered List Example -->
-        <h3>Top 5 Frontend Skills</h3>
-        <ol>
-            <li>HTML5 Semantic Markup</li>
-            <li>CSS3 and Responsive Design</li>
-            <li>JavaScript and Modern Frameworks</li>
-            <li>Web Accessibility Standards</li>
-            <li>Performance Optimization</li>
-        </ol>
+    <main>
+        <section id="about" class="container">
+            <h2>About the Box Model</h2>
+            <p class="highlight">The CSS Box Model is a fundamental concept that describes how elements are rendered on a webpage.</p>
+            <p>Every HTML element is treated as a box with the following properties:</p>
+            <ul class="box-properties">
+                <li>Content - The actual content of the element</li>
+                <li>Padding - Space between the content and the border</li>
+                <li>Border - A line surrounding the padding</li>
+                <li>Margin - Space outside the border</li>
+            </ul>
+        </section>
 
-        <!-- Unordered List Example -->
-        <h3>Web Development Tools</h3>
-        <ul>
-            <li>Code Editors
-                <!-- Nested List Example -->
-                <ul>
-                    <li>Visual Studio Code</li>
-                    <li>Sublime Text</li>
-                    <li>Atom</li>
-                </ul>
-            </li>
-            <li>Version Control Systems
-                <ul>
-                    <li>Git</li>
-                    <li>SVN</li>
-                </ul>
-            </li>
-            <li>Browser Developer Tools</li>
-            <li>Package Managers (npm, yarn)</li>
-        </ul>
-
-        <!-- Description List Example -->
-        <h3>Web Development Terminology</h3>
-        <dl>
-            <dt>HTML</dt>
-            <dd>HyperText Markup Language - The standard markup language for documents designed to be displayed in a web browser.</dd>
-            
-            <dt>CSS</dt>
-            <dd>Cascading Style Sheets - A style sheet language used for describing the presentation of a document written in HTML.</dd>
-            
-            <dt>JavaScript</dt>
-            <dd>A programming language that enables interactive web pages and is an essential part of web applications.</dd>
-        </dl>
-    </section>
-
-    <section id="table-section">
-        <h2>Popular Frontend Frameworks Comparison</h2>
-        
-        <!-- Table Example -->
-        <table>
-            <caption>Comparison of Major Frontend Frameworks in 2023</caption>
-            <thead>
-                <tr>
-                    <th>Framework</th>
-                    <th>Created By</th>
-                    <th>Initial Release</th>
-                    <th>Current Version</th>
-                    <th>Key Features</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>React</td>
-                    <td>Facebook</td>
-                    <td>2013</td>
-                    <td>18.x</td>
-                    <td>Virtual DOM, JSX, Component-based</td>
-                </tr>
-                <tr>
-                    <td>Angular</td>
-                    <td>Google</td>
-                    <td>2010</td>
-                    <td>15.x</td>
-                    <td>Two-way binding, TypeScript, Full framework</td>
-                </tr>
-                <tr>
-                    <td>Vue.js</td>
-                    <td>Evan You</td>
-                    <td>2014</td>
-                    <td>3.x</td>
-                    <td>Progressive framework, Easy learning curve</td>
-                </tr>
-                <tr>
-                    <td>Svelte</td>
-                    <td>Rich Harris</td>
-                    <td>2016</td>
-                    <td>3.x</td>
-                    <td>Compile-time, No virtual DOM, Less code</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="5">Data collected from official documentation and community surveys</td>
-                </tr>
-            </tfoot>
-        </table>
-    </section>
-
-    <section id="media-section">
-        <h2>Multimedia Content Examples</h2>
-        
-        <!-- Image Example -->
-        <figure>
-            <img src="https://via.placeholder.com/600x300" alt="Responsive web design illustration showing a website on multiple devices">
-            <figcaption>Responsive web design adapts to different screen sizes</figcaption>
-        </figure>
-
-        <!-- Audio Example -->
-        <h3>Sample Audio</h3>
-        <audio controls>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-
-        <!-- Video Example -->
-        <h3>Sample Video</h3>
-        <video controls width="600">
-            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
-            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
-
-    <section id="form-section">
-        <h2>Web Development Course Registration</h2>
-        <p>Fill out the form below to register for our comprehensive web development course.</p>
-        
-        <!-- HTML5 Form with Validation -->
-        <form action="#" method="post" autocomplete="on">
-            <!-- Personal Information Fieldset -->
-            <fieldset>
-                <legend>Personal Information</legend>
-                
-                <label for="fullname" class="required">Full Name</label>
-                <input type="text" id="fullname" name="fullname" required 
-                       minlength="3" maxlength="50" placeholder="Enter your full name" 
-                       autocomplete="name">
-                
-                <label for="email" class="required">Email Address</label>
-                <input type="email" id="email" name="email" required 
-                       placeholder="your.email@example.com" autocomplete="email">
-                
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" 
-                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
-                       placeholder="Format: 123-456-7890" autocomplete="tel">
-                
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob" 
-                       min="1950-01-01" max="2010-01-01">
-                
-                <label for="website">Personal Website</label>
-                <input type="url" id="website" name="website" 
-                       placeholder="https://yourwebsite.com" autocomplete="url">
-            </fieldset>
-            
-            <!-- Course Selection Fieldset -->
-            <fieldset>
-                <legend>Course Selection</legend>
-                
-                <label for="course-level" class="required">Experience Level</label>
-                <select id="course-level" name="course-level" required>
-                    <option value="">Select your experience level</option>
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
-                </select>
-                
-                <div class="checkbox-group">
-                    <p class="required">Areas of Interest (Select at least one)</p>
-                    <label>
-                        <input type="checkbox" name="interests" value="html" required>
-                        HTML5 & Semantic Web
-                    </label>
-                    <label>
-                        <input type="checkbox" name="interests" value="css">
-                        CSS3 & Responsive Design
-                    </label>
-                    <label>
-                        <input type="checkbox" name="interests" value="javascript">
-                        JavaScript & Frameworks
-                    </label>
-                    <label>
-                        <input type="checkbox" name="interests" value="backend">
-                        Backend Development
-                    </label>
+        <section id="features" class="container">
+            <h2>Box Model Features</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Content</h3>
+                    <p>The innermost part of the box where text and images appear.</p>
+                    <button class="btn">Learn More</button>
                 </div>
-                
-                <div class="radio-group">
-                    <p class="required">Preferred Course Format</p>
-                    <label>
-                        <input type="radio" name="format" value="online" required>
-                        Online (Self-paced)
-                    </label>
-                    <label>
-                        <input type="radio" name="format" value="live-online">
-                        Live Online Classes
-                    </label>
-                    <label>
-                        <input type="radio" name="format" value="in-person">
-                        In-Person Workshops
-                    </label>
+                <div class="card">
+                    <h3>Padding</h3>
+                    <p>Creates space around the content, inside the border.</p>
+                    <button class="btn">Learn More</button>
                 </div>
-                
-                <label for="start-date" class="required">Preferred Start Date</label>
-                <input type="date" id="start-date" name="start-date" required 
-                       min="2023-01-01">
-                
-                <label for="sessions">Number of Sessions per Week</label>
-                <input type="number" id="sessions" name="sessions" 
-                       min="1" max="5" value="2">
-            </fieldset>
-            
-            <!-- Additional Information Fieldset -->
-            <fieldset>
-                <legend>Additional Information</legend>
-                
-                <label for="referral">How did you hear about us?</label>
-                <input type="text" id="referral" name="referral" list="referral-sources">
-                <datalist id="referral-sources">
-                    <option value="Search Engine">
-                    <option value="Social Media">
-                    <option value="Friend or Colleague">
-                    <option value="Advertisement">
-                    <option value="Other">
-                </datalist>
-                
-                <label for="special-needs">Special Requirements or Accommodations</label>
-                <textarea id="special-needs" name="special-needs" 
-                          rows="4" maxlength="500" 
-                          placeholder="Please let us know if you have any special requirements"></textarea>
-                
-                <label for="coupon">Discount Code</label>
-                <input type="text" id="coupon" name="coupon" 
-                       pattern="[A-Z0-9]{6}" 
-                       placeholder="Format: ABC123" 
-                       title="6 characters, uppercase letters and numbers only">
-                
-                <label>
-                    <input type="checkbox" name="terms" required>
-                    I agree to the <a href="#">Terms and Conditions</a>
-                </label>
-                
-                <label>
-                    <input type="checkbox" name="newsletter">
-                    Subscribe to our newsletter for updates
-                </label>
-            </fieldset>
-            
-            <!-- Hidden Fields Example -->
-            <input type="hidden" name="source" value="website">
-            <input type="hidden" name="campaign" value="fall2023">
-            
-            <!-- Form Submission -->
-            <button type="submit">Submit Registration</button>
-            <button type="reset">Clear Form</button>
-        </form>
-    </section>
+                <div class="card">
+                    <h3>Border</h3>
+                    <p>A line that surrounds the padding and content.</p>
+                    <button class="btn">Learn More</button>
+                </div>
+                <div class="card">
+                    <h3>Margin</h3>
+                    <p>Creates space around the element, outside the border.</p>
+                    <button class="btn">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2023 Web Development Academy. All rights reserved.</p>
+        <p>&copy; 2023 CSS Box Model Demonstration</p>
     </footer>
 </body>
 </html>
